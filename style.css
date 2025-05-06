@@ -570,6 +570,9 @@ input {
 	text-align: center;
 	padding: 10px 0;
 }
+.width-max-bigger{
+	max-width: 100%;
+  }
 .navbar .nav-item {
     margin: auto;
 	color: rgb(0, 0, 0) !important;
