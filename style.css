@@ -125,8 +125,6 @@ h6 {
 .minus-bottom-margin{
 	position:relative;
 }
-.move-bottom-margin{
-}
 .minus-leftbot-margin{
 	margin-left: -50px;
 	margin-top: -70px;
@@ -570,9 +568,6 @@ input {
 	text-align: center;
 	padding: 10px 0;
 }
-.width-max-bigger{
-	max-width: 100%;
-  }
 .navbar .nav-item {
     margin: auto;
 	color: rgb(0, 0, 0) !important;
@@ -625,6 +620,9 @@ margin-bottom: 30px;
   }
   .nav-item-override .active{
 	color:black !important;
+  }
+  .width-max-bigger{
+	max-width: 100%;
   }
 }
 @media all and (max-width:768px) {
@@ -725,4 +723,98 @@ h3 {
 .footer-copy p {
 	font-size: 10px;
 }
+}
+@media all and (max-width:768px) {
+	navbar-toggler{
+		z-index: 10;
+	}	
+	.navbar-logo{
+		width: 30%;
+	}
+	.navbar-collapse {
+		position: fixed;
+		top: 0;
+		right: -250px; /* Start hidden off the screen */
+		width: 250px;  /* Adjust the width of the sidebar */
+		height: 100%;  /* Full height */
+		background-color: #333;  /* Choose a background color */
+		transition: right 0.3s ease-in-out; /* Smooth transition */
+		z-index: 1000;  /* Make sure it appears above other elements */
+	}
+	
+	/* When the navbar is active (should be visible), slide it in from the right */
+	.navbar-collapse.show {
+		right: 0; /* Slide in to the right */
+	}
+	
+	/* Additional styling for the nav items (optional) */
+	.navbar-nav {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		margin-top: 30px;
+	}
+	
+	.nav-item {
+		padding: 15px;
+		text-align: center;
+	}
+	
+	.nav-link {
+		color: white;
+		text-decoration: none;
+		font-size: 18px;
+	}
+	
+	.nav-item-override {
+		/* Customize the first item if needed */
+	}
+}
+@media all and (max-width:375px) {
+	.navbar-toggler {
+        z-index: 10;
+    }    
+    .navbar-logo {
+        width: 30%;
+    }
+    
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start hidden off the screen */
+        width: 250px;  /* Adjust the width of the sidebar */
+        height: 100%;  /* Full height */
+        background-color: #333;  /* Choose a background color */
+        transition: right 0.3s ease-in-out; /* Smooth transition for sliding effect */
+        z-index: 1000;  /* Make sure it appears above other elements */
+    }
+
+    /* When the navbar is active (should be visible), slide it in from the right */
+    .navbar-collapse.show {
+        right: 0; /* Slide in to the right */
+    }
+
+    /* Additional styling for the nav items */
+    .navbar-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 30px;
+    }
+
+    .nav-item {
+        padding-top: 30px;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .nav-link {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    .nav-item-override {
+        /* Customize the first item if needed */
+    }
 }
